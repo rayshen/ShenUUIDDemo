@@ -14,6 +14,7 @@
 		64D87ED81B6A3FBD00FF176F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D87ED71B6A3FBD00FF176F /* Images.xcassets */; };
 		64D87EDB1B6A3FBD00FF176F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64D87ED91B6A3FBD00FF176F /* LaunchScreen.xib */; };
 		64D87EE71B6A3FBD00FF176F /* ShenUUIDDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D87EE61B6A3FBD00FF176F /* ShenUUIDDemoTests.m */; };
+		64D87EF21B6A3FD400FF176F /* CHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D87EF11B6A3FD400FF176F /* CHKeychain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		64D87EE01B6A3FBD00FF176F /* ShenUUIDDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShenUUIDDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64D87EE51B6A3FBD00FF176F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64D87EE61B6A3FBD00FF176F /* ShenUUIDDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShenUUIDDemoTests.m; sourceTree = "<group>"; };
+		64D87EF01B6A3FD400FF176F /* CHKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHKeychain.h; sourceTree = "<group>"; };
+		64D87EF11B6A3FD400FF176F /* CHKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHKeychain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				64D87ECF1B6A3FBD00FF176F /* AppDelegate.m */,
 				64D87ED11B6A3FBD00FF176F /* ViewController.h */,
 				64D87ED21B6A3FBD00FF176F /* ViewController.m */,
+				64D87EF01B6A3FD400FF176F /* CHKeychain.h */,
+				64D87EF11B6A3FD400FF176F /* CHKeychain.m */,
 				64D87ED41B6A3FBD00FF176F /* Main.storyboard */,
 				64D87ED71B6A3FBD00FF176F /* Images.xcassets */,
 				64D87ED91B6A3FBD00FF176F /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				64D87ED31B6A3FBD00FF176F /* ViewController.m in Sources */,
 				64D87ED01B6A3FBD00FF176F /* AppDelegate.m in Sources */,
+				64D87EF21B6A3FD400FF176F /* CHKeychain.m in Sources */,
 				64D87ECD1B6A3FBD00FF176F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShenUUIDDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +367,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShenUUIDDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

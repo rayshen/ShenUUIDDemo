@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#define UUIDKEY @"ShenUUID_UUID"
 
 @interface AppDelegate ()
 
@@ -16,9 +17,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self uuid];
     return YES;
 }
+
+#pragma mark--获取设备UUID
+-(NSString*)uuid{
+    if ([CHKeychain load:UUIDKEY]) {
+        NSString *result = [CHKeychain load:UUIDKEY];
+        NSLog(@"已存在手机UUID：%@",result);
+        return result;
+    }
+    else
+    {
+        CFUUIDRef puuid = CFUUIDCreate( nil );
+        CFStringRef uuidString = CFUUIDCreateString( nil, puuid );
+        NSString * result = (NSString *)CFBridgingRelease(CFStringCreateCopy( NULL, uuidString));
+        CFRelease(puuid);
+        CFRelease(uuidString);
+        [CHKeychain save:UUIDKEY data:result];
+        NSLog(@"初次创建手机UUID：%@",result);
+        return result;
+    }
+    return nil;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
